@@ -1,11 +1,13 @@
 import os
 import json
 
+db_name = "newdb"
+collection_name = "newcoll"
+
 def preprocess(search_query):
 	
-	db_name = "newdb"
-	coll_name = "newcoll"
-	query_text = 'db.' + coll_name + '.find({$text: {$search: "'+ search_query + '"}}, {score: {$meta: "textScore"}}).sort({score:{$meta:"textScore"}}).limit(10);\n'
+	search_query = search_query.replace('\"', '\\\"')
+	query_text = 'db.' + collection_name + '.find({$text: {$search: "'+ search_query + '"}}, {score: {$meta: "textScore"}}).sort({score:{$meta:"textScore"}}).limit(10);\n'
 
 	f = open("temp/query.js", "w+")
 	f.write("use " + db_name + ";\n")
