@@ -24,10 +24,9 @@ def search():
 def play_video(video_id):
     video_playing = True
     video_playing_obj = get_video_by_id(video_id)
-    #Populate this list from neo4j, define functions in VSdatabase.py only
-    results=[]
+    # video_id = 'amDIqO9jHtY'
+    results = get_similiar_videos(video_id, 10, 0)
     return render_template('home.html', results=results, video_playing=video_playing, video_playing_obj=video_playing_obj)
 
-
 if __name__ == "__main__":
-    app.run()
+    app.run(debug = True)
