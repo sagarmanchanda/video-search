@@ -1,0 +1,165 @@
+/*
+Theme Name: Globals - Material and Bootstrap HTML template
+Module : Directory
+Description: Custom styles are defined in this class
+Author: Jyostna
+Author URI: http://themeforest.net/user/jyostna
+Version: 1.0 
+-------------------------------------------- *//*
+TABLE OF CONTENT
+-------------------------------------------------
+1- ORGANGE COLOR STYLES
+---------------------------------------------- */
+
+
+/*========================== ORGANGE COLOR STYLES =======================*/
+
+.orangepeel-color .read-more:hover {
+    color: #ff9700 !important;
+    cursor: pointer;
+}
+
+.orangepeel-color a{color: #9699a6 !important;}
+
+.orangepeel-color a:hover{color: #ff9700 !important;}
+
+
+.orangepeel-color{background-color: #ff9700 !important;}
+
+.orangepeel-color:hover{background-color: #ec8e06 !important;}
+
+.menu-plus-btn {
+    background-color: #ff9700 !important;
+    border-radius: 50%;
+    color: #ffffff !important;
+    height: 70px;
+    position: relative;
+    right: 23px;
+    top: 82px;
+    width: 70px;
+    z-index: 30;
+}
+
+.menu-plus-btn:hover{
+    background-color: #ec8e06 !important;
+}
+
+.btn-section li span:hover {
+    color: #ff9700  !important;
+}
+
+.subscribe-btn:hover {
+    background-color: #ff9700 !important;
+    border: 2px solid #ec8e06;
+}
+
+
+.service .form-group .material-icons:hover {
+    color: #ff9700 !important;
+    direction: ltr;
+    display: inline-block;
+    font-family: "Material Icons";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+
+.service .sa-main-filter-styles .sa-filter-content .form-control {
+    background-image: linear-gradient(#ff9700, #ff9700), linear-gradient(#d2d2d2, #d2d2d2) !important;
+}
+
+
+.service .sa-main-filter-styles .sa-filter-content .checkbox input[type="checkbox"]:checked + .checkbox-material .check::before, .sa-main-filter-styles .sa-filter-content .checkbox-default input[type="checkbox"]:checked + .checkbox-material .check::before {
+    color: #ff9700 !important;
+}
+
+
+.sa-btn-filter:not(.btn-link):not(.btn-flat) {
+    background: #ec8e06 none repeat scroll 0 0;
+    border-radius: 32px;
+    color: #ffffff;
+    font-size: 16px;
+    height: 54px;
+    margin: auto;
+    text-transform: capitalize;
+    width: 210px;
+}
+
+.sa-btn-filter:hover:not(.btn-link):not(.btn-flat) {
+    background-color: #ff9700 !important;
+}
+
+/*services*/
+.service .col-md-12 > .sa-gridlist-item:hover .sa-content-price .contact {
+    background:#ff9700 !important;
+}
+.service .sa-gridlist-item .sa-grid-over li.sa-realestate-c-bg{
+    background: #ec8e06 none repeat scroll 0 0 !important;
+}
+.service .col-md-12 > .sa-gridlist-item .sa-content-img{
+    border-left:5px solid #ff9700;
+    border-bottom:0;
+}
+.service .col-md-4 > .sa-gridlist-item .sa-content-img{
+    border-bottom:5px solid #ff9700;
+}
+.service .sa-gridlist-item .sa-realestate-c-bg {
+    background: #ec8e06 none repeat scroll 0 0 !important;
+}
+.service .sa-gridlist-item .sa-realestate-b-bg {
+    background: #f69201 none repeat scroll 0 0 !important;
+}
+.service .sa-gridlist-item .sa-realestate-bg {
+    background: #ff9700 none repeat scroll 0 0 !important;
+}
+.service .sa-gridlist-item:hover .sa-content-title h6{
+    color:#ff9700 !important;
+}
+
+.service .form-group .form-control:focus, .form-group-default .form-control:focus {
+    background-image: linear-gradient(#ff9700, #ff9700), linear-gradient(#d2d2d2, #d2d2d2) !important;
+}
+
+.service .sa-filter-content .form-control:focus {
+    background-image: linear-gradient(#ff9700, #ff9700), linear-gradient(#d2d2d2, #d2d2d2) !important;
+}
+
+.owl-theme .owl-controls .owl-page.active span {
+    background-color: #FF9700 !important;
+}
+.hover-iocn:hover{
+    color: #FF9700 !important;
+}
+.doctor-send-msg-btn{
+    background-color: #FF9700 !important;
+}
+#map-sort .list-all a[aria-expanded="true"] {
+    color: #FF9700 !important;
+}
+
+.list-all li.active {
+    border-top: 3px solid #FF9700;
+}
+.list-all > li:hover {
+    border-top: 3px solid #FF9700;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color: #FF9700 !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: rgb(189, 189, 189) !important;
+}
+.select2-container--default .select2-selection--single {
+    border-bottom: 1px solid rgb(204, 207, 215);
+}
+
+/*========================== ORGANGE COLOR STYLES END =======================*/
+
+

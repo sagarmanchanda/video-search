@@ -1,0 +1,456 @@
+/*
+Theme Name: Globals - Material and Bootstrap HTML template
+Module : Directory
+Description: Custom styles are defined in this class
+Author: Jyostna
+Author URI: http://themeforest.net/user/jyostna
+Version: 1.0 
+-------------------------------------------- *//*
+TABLE OF CONTENT
+-------------------------------------------------
+1- OFFER-GRIDLIST STYLES
+  1.1 OFFER-GRIDLIST COLOR STYLES 
+  1.2 OFFER-FEATURES STYLES
+2- FIGURE SECTION
+ ---------------------------------------------- */
+
+/*========================== OFFER-GRIDLIST STYLES =======================*/
+h1, h2, h3, h4, h5, h6{
+    font-family: 'roboto', SansSerif;
+   
+}
+header{
+    background-color:#fafafa ;
+}
+body{
+  background-color: #ffffff;
+}
+.gridlist_heading{
+    color: #31364c;
+    font-size: 46px;
+    font-weight: 300;
+}
+.offers-small {
+    border-top: 5px solid #f04e4e;
+}
+
+.grid-row-marge{
+    margin-top: 8.8%;
+}
+.offers-mini p{
+  font-weight: normal;
+  line-height: 25px;
+  color: #9699a6;
+  margin-bottom: 7px;
+  margin-top: -5px;
+}
+
+/*========================== 1.1 OFFER-GRIDLIST COLOR STYLES =======================*/
+
+.grid2-offer{
+     border-top: 5px solid #fecc17 !important;
+}
+.offers-box:hover .grid2-offer h5{
+    color: #fecc17 !important;
+}
+.grid2-btn1{
+   background-color: #f0bc00 !important; 
+}
+.grid2-btn2{
+   background-color: #f8c407 !important;
+}
+.grid2-btn3{
+   background-color: #fecc17 !important;
+}
+
+
+.grid3-offer{
+     border-top: 5px solid #ccdb38 !important;
+}
+.offers-box:hover .grid3-offer h5{
+    color: #ccdb38 !important;
+}
+.grid3-btn1{
+   background-color: #b8c728 !important; 
+}
+.grid3-btn2{
+   background-color: #c3d22f !important;
+}
+.grid3-btn3{
+   background-color: #ccdb38 !important;
+}
+
+
+.grid4-offer{
+     border-top: 5px solid #00bff3 !important;
+}
+.offers-box:hover .grid4-offer h5{
+    color: #00bff3 !important;
+}
+.grid4-btn1{
+   background-color: #00afdf !important; 
+}
+.grid4-btn2{
+   background-color: #07b6e6 !important;
+}
+.grid4-btn3{
+   background-color: #00bff3 !important;
+}
+
+
+.grid5-offer{
+     border-top: 5px solid #6739b6 !important;
+}
+.offers-box:hover .grid5-offer h5{
+    color: #6739b6 !important;
+}
+.grid5-btn1{
+   background-color: #582aa6 !important; 
+}
+.grid5-btn2{
+   background-color: #6133af !important;
+}
+.grid5-btn3{
+   background-color: #6739b6 !important;
+}
+
+
+.grid6-offer{
+     border-top: 5px solid #9c26b0 !important;
+}
+.offers-box:hover .grid6-offer h5{
+    color: #9c26b0 !important;
+}
+.grid6-btn1{
+   background-color: #8c1b9f !important; 
+}
+.grid6-btn2{
+   background-color: #9320a6 !important;
+}
+.grid6-btn3{
+   background-color: #9c26b0 !important;
+}
+
+
+.grid7-offer{
+     border-top: 5px solid #e91d62 !important;
+}
+.offers-box:hover .grid7-offer h5{
+    color: #e91d62 !important;
+}
+.grid7-btn1{
+   background-color: #d50c50 !important; 
+}
+.grid7-btn2{
+   background-color: #e01459 !important;
+}
+.grid7-btn3{
+   background-color: #e91d62 !important;
+}
+
+
+.grid8-offer{
+     border-top: 5px solid #ff9700 !important;
+}
+.offers-box:hover .grid8-offer h5{
+    color: #ff9700 !important;
+}
+.grid8-btn1{
+   background-color: #ec8e06 !important; 
+}
+.grid8-btn2{
+   background-color: #f69201 !important;
+}
+.grid8-btn3{
+   background-color: #ff9700 !important;
+}
+
+/*========================== 1.1 OFFER-GRIDLIST COLOR STYLES END =======================*/
+
+/*========================== 1.2 OFFER-FEATURES STYLES =======================*/
+
+.featured-offer{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.offers-small{
+    background-color: #ffffff;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 20px;
+    margin-right: 0;
+}
+.offers-small h5{
+    color: #31364c;
+    font-size: 18px;
+    margin: 0;
+}
+.offers-mini{
+    background-color: #ffffff;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 20px;
+    list-style-type: none;
+    margin-right: 0;
+}
+.offers-mini i{
+    color: #cdcfd7;
+    font-size: 16px;
+    position: relative;
+    top: 2px;
+}
+.offers-mini li{
+    color: #cdcfd7;
+    font-weight: normal;
+    margin-bottom: 7px;
+}
+.offers-mini span{
+    color: #9699a6;
+}
+.offers-bottom{
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-right: 0;
+}
+.offers-bottom span{
+    color: #8dc63f;
+    font-size: 16px;
+    font-weight: normal;
+}
+.offers-bottom label{
+    color: #cdcfd7;
+    font-size: 14px;
+    text-align: right;
+    float: right;
+    position: relative;
+    top: 5px;
+}
+.show-offer-btn{
+    background-color: #252525 !important;
+    color: #ffffff !important;
+    text-transform: capitalize;
+    border-radius: 26px;
+    width: 100%;
+    margin-top: 5%;
+}
+@media screen and (min-width: 610px) {
+    .show-offer-btn {
+       margin-top: 19%;
+    }
+}
+.show-offer-btn span{
+    color: #f04e4e !important;
+}
+.show-offer-btn i{
+    font-size: 13px;
+    position: relative;
+    top: 2px;
+}
+/*========================== 1.2 OFFER-FEATURES STYLES END =======================*/
+
+/*========================== OFFER-GRIDLIST STYLES END =======================*/
+
+/*========================== FIGURE SECTION =======================*/
+figcaption:hover {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    position: absolute;
+    z-index: 9999;
+    cursor: default;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+figcaption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.offers-box:hover .btn-h {
+    opacity: 1;
+}
+
+.btn-h {
+    opacity: 0;
+}
+
+
+figure:hover > figcaption {
+    opacity: 1;
+}
+
+figcaption p {
+    position: relative;
+    top: 40%;
+    color: #fff;
+    font-size: 22px;
+    text-shadow: 0 0 20px #000000;
+}
+
+figcaption span {
+    display: block;
+    font-size: 50px;
+    margin-bottom: 6px;
+}
+
+.offers-box:hover .fancy-img {
+    opacity: 0.4;
+}
+
+.offers-box:hover .meet-img-hover {
+    background-color: #292d31;
+}
+.hover-btn1{
+    width: 270px;
+    background-color: #cb4243;
+    padding-top: 16px;
+    padding-bottom: 19px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 0px;
+}
+@media screen and (min-width: 610px) {
+  /*  .hover-btn1{
+        margin-left: -19px;
+    }*/
+}
+.hover-btn1 i{
+    position: relative;
+    top:7px;
+}
+.hover-btn2{
+    width: 270px;
+    background-color: #dd4344;
+    padding-top: 16px;
+    padding-bottom: 19px;
+    font-size: 14px;
+    font-weight: normal;
+     margin-left: 0;
+}
+@media screen and (min-width: 610px) {
+  /*  .hover-btn2{
+        margin-left: -19px;
+    }*/
+}
+.hover-btn2 i{
+    position: relative;
+    top:7px;
+}
+.hover-btn3{
+    width: 270px;
+    background-color: #f04e4e;
+    padding-top: 16px;
+    padding-bottom: 19px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 0;
+}
+
+@media screen and (min-width: 610px) {
+   /* .hover-btn3{
+        margin-left: -22px;
+    }
+}*/
+
+.hover-btn3 i{
+    position: relative;
+    top:7px;
+}
+.offers-box:hover .offers-small h5{
+    color: #f04e4e;
+}
+
+.offers-box:hover .offers-bottom{
+    background-color: #292d31;
+}
+.offers-box:hover{
+    -webkit-box-shadow: 2px 8px 17px 0px rgba(201,195,201,1);
+-moz-box-shadow: 2px 8px 17px 0px rgba(201,195,201,1);
+box-shadow: 2px 8px 17px 0px rgba(201,195,201,1);
+}
+.offers-box{
+    width: 270px;
+    position: relative;
+}
+.small-box-space{
+ padding-bottom: 14%;
+}
+.agent-img{
+    margin-top: 18px;
+}
+
+/*googlemap_full start*/
+.grid-col{
+  padding-left: 0;
+  padding-right: 0;
+}
+.map-col{
+  padding-right: 0;
+  padding-left: 0;
+}
+/*google-input start*/
+.google-input{
+   background-color: #292d31; 
+    padding-bottom: 3.7%;
+    padding-top: 4.7%;
+}
+.google-input-box{
+    color: #ffffff;
+    padding-bottom: 6px;
+    font-size: 16px;
+}
+.google-select-box{
+    color: #ffffff;
+}
+.filter-now{
+    background-color: #00bff3 !important;
+    color: #ffffff !important;
+    border-radius: 27px;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 16px 54px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+@media screen and (min-width: 610px) {
+    .filter-now{
+        margin-top: -20px;
+    }
+}
+.google-gps-icon{
+    color: #45474f;
+    float: right;
+    position: relative;
+    top: -28px;
+    font-size: 17px;
+    margin-bottom: -17px;
+}
+#offers-slider .owl-pagination {
+    float: right;
+    top: -40px;
+    position: relative;
+}
+.full-map-input{
+  background-color: #292c31;
+  padding: 25px 50px 30px 50px;
+}
+/*google-input closed*/
+/*googlemap_full closed*/
+@media only screen and (max-width: 590px)  {
+.hover-btn1{
+    margin-left: 0px !important;
+}
+
+    .hover-btn2 {
+        margin-left: 0px !important;
+    }
+
+    .hover-btn3 {
+        margin-left: 0px !important;
+    }
+
+}}
+
+/*========================== FIGURE SECTION END =======================*/

@@ -1,53 +1,324 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html>
 
-{% block title %} <title>video-search</title> {% endblock %}
+<head>
+    <!--meta tag css link-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--favicon-->
+    <link rel="icon" href="images/fevicon.ico" type="image/x-icon">
+    <!--title-->
+    <title>Video Search Engine</title>
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/roboto.min.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/bootstrap-material-design.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/material.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/material-design-icon.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/ripples.min.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/custom.css') }}">
+    <!--tooltip-->
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/tooltip/html5tooltips.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/tooltip/html5tooltips.animation.css') }}">
+    <!--revolution slider-->
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/revolution-slider/style.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/revolution-slider/settings.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/select2.min.css') }}">
+    <!--sa-plugins css file-->
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/sa-plugin/sa-style.css') }}">
+    <!--owl carousel css links-->
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/owl.carousel.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/owl.theme.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/directory.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/leftmenu.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/red-color.css') }}">
+</head>
 
-{% block body %}
-	
-	<div>
-		{% if user.logged_in %}
-			<p>Hello {{ user.username }}</p>
-			<p><a href="{{ url_for('logout') }}">Logout</a></p>
-		{% else %}
-			<p><a href="{{ url_for('login') }}">Click here</a> to login!</p>
-		{% endif %}
-	</div>
+<body>
+    <!--Left Menu Button-->
+
+    <!--wrapper -->
+    <!--Left Menu Button end-->
+    <!--header section-->
+
+    <!--breadcrumb-->
+    <div class="menu-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb breadcrumb-navigation">
+                      <li>
+                          <a href="#" class="menu1">Home</a>
+                      </li>
+                      <li>
+												{% if user.logged_in %}
+                          <a href="{{ url_for('logout') }}" class="menu1">Logout - {{ user.username }}</a>
+												{% else %}
+													<a href="{{ url_for('login') }}" class="menu1">Login</a>
+												{% endif %}
+                      </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--breadcrumb closed-->
+    <!--slider-->
+    <!--
+#################################
+    - THEMEPUNCH BANNER -
+#################################
+-->
+
+    <!--slider closed-->
+    <!-- section Real-Estate Contents -->
+    <section class="sa-main-layout-contents">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="list-inline grid-list real" id="grid-list">
+															{% for result in results %}
+                                <li class="col-md-4 col-xs-6">
+                                    <div class="sa-gridlist-item all_grid">
+                                        <!-- content img -->
+                                        <div class="sa-content-img">
+                                            <img src="{{ result.videoInfo.snippet.thumbnails.high.url }}" alt="house1" class="img-responsive">
+                                        </div>
+                                        <!-- ./content img -->
+                                        <div class="sa-content-info">
+                                            <!-- content info -->
+                                            <div class="sa-content-details">
+                                                <!-- content title -->
+                                                <div class="sa-content-title">
+                                                    <a href="{{ url_for('play_video', video_id=result.videoInfo.id) }}">
+                                                        <p class="reli">{{ result.videoInfo.snippet.title }}</p>
+                                                    </a>
+                                                </div>
+                                                <!-- ./content title -->
+                                                <p style="max-height:70px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{ result.videoInfo.snippet.description }}</p>
+                                            </div>
+                                            <!-- ./content info -->
+                                            <!-- content price -->
+                                            <div class="sa-content-price">
+                                                <p style="color:#E44546;font-size:12px;"><span class="glyphicon glyphicon-eye-open" />{{ result.videoInfo.statistics.viewCount }} | <span class="glyphicon glyphicon-thumbs-up" />{{ result.videoInfo.statistics.likeCount }}</p>
+                                                <div class="sa-agent">
+                                                    <img src="{{ url_for('static',filename='images/channel.png') }}" alt="agent1" class="img-responsive img-circle" style="width:40px;">
+                                                </div>
+                                                <div class="sa-agent-name">
+                                                    <p>{{ result.videoInfo.snippet.channelTitle }}</p>
+                                                    <button class="btn btn-default contact">contacts</button>
+                                                </div>
+                                            </div>
+                                            <!-- ./content price -->
+                                        </div>
+                                    </div>
+                                </li>
+																{% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- filter-styles -->
+                <div class="col-md-3">
+                    <div class="sa-main-filter-styles home_form">
+                        <form class="sa-filter-form" action="{{ url_for('search') }}" method="POST">
+                            <!-- title -->
+                            <div class="sa-filter-titles">
+                                <h6>Search</h6>
+                            </div>
+                            <!-- ./title -->
+                            <!-- contents -->
+                            <div class="sa-filter-content">
+                                <ul class="sa-filter-search">
+                                    <li>
+                                        <div class="form-group label-floating is-empty">
+                                            <label for="keyword" class="control-label">Enter Keyword...</label>
+                                            <input type="text" class="form-control" id="search_query" name="search_query">
+                                            <span class="material-input"></span></div>
+                                    </li>
+                                    <!--<li>
+                                        <div class="form-group">
+                                            <select id="select1" class="form-control">
+                                                <option class="sa-select" selected>Real Estate</option>
+                                                <option class="sa-select">Automotive</option>
+                                                <option class="sa-select">Restaurant</option>
+                                                <option class="sa-select">Job</option>
+                                                <option class="sa-select">Hotels &amp; Travel</option>
+                                                <option class="sa-select">Shopping</option>
+                                                <option class="sa-select">Pets</option>
+                                                <option class="sa-select">Services</option>
+                                            </select><span class="material-input"></span></div>
+                                    </li>-->
+                                </ul>
+                            </div>
+                            <!-- ./contents -->
+                            <!-- title -->
+                            <!--<div class="sa-filter-titles">
+                                <h6>Categories</h6>
+                            </div>
+                            <!-- ./title -->
+                            <!-- contents -->
+                            <!--<div class="sa-filter-content">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value=""><span class="checkbox-material"></span> For Sale <sup>368</sup>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value=""><span class="checkbox-material"></span> Land &amp; Estates <sup>33</sup>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value=""><span class="checkbox-material"></span> To Rent <sup>56</sup>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value=""><span class="checkbox-material"></span> To Share <sup>8</sup>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- ./contents -->
+                            <!-- title -->
+                            <!--<div class="sa-filter-titles">
+                                <h6>Saleprice</h6>
+                            </div>
+                            <!-- ./title -->
+                            <!-- contents -->
+                            <!--<div class="sa-filter-content">
+                                <div class="row sa-2-ols">
+                                    <div class="col-md-6">
+                                        <div class="form-group label-floating is-empty">
+                                            <label for="i3i" class="control-label">Min</label>
+                                            <input type="text" class="form-control" id="i3i">
+                                            <span class="material-input"></span></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group label-floating is-empty">
+                                            <label for="i4i" class="control-label">Max</label>
+                                            <input type="text" class="form-control" id="i4i">
+                                            <span class="material-input"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ./contents -->
+                            <!-- title -->
+                            <!-- ./title -->
+                            <!-- contents -->
+                            <!-- ./contents -->
+                            <!-- title -->
+                            <!--<div class="sa-filter-titles">
+                                <h6>Bedrooms</h6>
+                            </div>
+                            <!-- ./title -->
+                            <!-- contents -->
+                            <!--<div class="sa-filter-content">
+                                <div class="row sa-2-ols">
+                                    <div class="col-md-6">
+                                        <div class="form-group label-floating is-empty">
+                                            <label for="mini" class="control-label">Min</label>
+                                            <input type="text" class="form-control" id="mini">
+                                            <span class="material-input"></span></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group label-floating is-empty">
+                                            <label for="maxi" class="control-label">Max</label>
+                                            <input type="text" class="form-control" id="maxi">
+                                            <span class="material-input"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ./contents -->
+                            <!-- title -->
+                            <!-- ./title -->
+                            <!-- contents -->
+                            <!-- ./contents -->
+                            <!-- title -->
+                            <!--<div class="sa-filter-titles">
+                                <h6>Property Type</h6>
+                            </div>
+                            <!-- ./title -->
+                            <!-- contents -->
+                            <!--<div class="sa-filter-content">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value=""><span class="checkbox-material"></span> Commercial
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value=""><span class="checkbox-material"></span> Residential
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- ./contents -->
+                            <!-- title -->
+                            <!--<div class="sa-filter-titles">
+                                <h6>New Homes</h6>
+                            </div>-->
+                            <!-- ./title -->
+                            <!-- contents -->
+                            <!--<div class="sa-filter-content">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value=""><span class="checkbox-material"></span> New Build
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value=""><span class="checkbox-material"></span> Pre-Owned
+                                    </label>
+                                </div>
+                            </div>-->
+                            <!-- ./contents -->
+                            <button type="submit" class="btn sa-btn-filter center-block" name="search">Filter Now</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- ./filter-styles -->
+            </div>
+        </div>
+    </section>
+    <!-- ./section Real-Estate Contents -->
 
 
-	<div>
-		<form action="{{ url_for('search') }}" method="POST">
-			<dl>
-				<dt>Search Query: 
-				<input type="text" name="search_query">
-				<input type="submit" name="search">
-			</dl>
-		</form>
-	</div>
-	
-	<div>
-		{% if video_playing %}
-			<p>Current Video Playing</p>
-			<!-- You can play with the object video_playing_obj and extract anything -->
-			<img src = "{{ video_playing_obj.videoInfo.snippet.thumbnails.default.url }}" >
-			<h3>{{ video_playing_obj.videoInfo.id }}</h3>
-			{% if user.logged_in %}
-			<a href="{{ url_for('like', video_id=video_playing_obj.videoInfo.id) }}">Like this video</a>
-			{% endif %}
-		{% else %}
-			<p>Click on some video to play it!</p>
-		{% endif %}
-	</div>
 
-	<div>
-		<ul>
-			{% for result in results %}
-				<img src = "{{ result.videoInfo.snippet.thumbnails.default.url }}" >
-				<li><a href="{{ url_for('play_video', video_id=result.videoInfo.id) }}">{{ result.videoInfo.id }}</a><br>{{ result.videoInfo.snippet.title }}</li>
-			{% else %}
-				<p> Come on, search something!</p>
-			{% endfor %}
-		</ul>
-		
-	</div>
 
-{% endblock %}
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="breadcrumb copy-right-box">
+                        <li>
+                            <img src="{{ url_for('static',filename='images/copyright.png') }}" class="copyright-img" alt="copyright">&nbsp; &nbsp; &copy; </li>
+                        <li> 2017 Uppi Dude
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer section ends-->
+    <!--Back to top button-->
+
+    <!--Back to top button end-->
+    <!--jquery file-->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery-1.11.3.min.js') }}"></script>
+    <!--bootstrap js files-->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/material.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/ripples.min.js') }}"></script>
+    <!-- custom js file-->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/custom.js') }}"></script>
+    <!--revolution-slider-->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/revolution-slider/jquery.themepunch.tools.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/revolution-slider/jquery.themepunch.revolution.min.js') }}"></script>
+
+    <!--tooltip js file-->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/tooltip/html5tooltips.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/rangeSlider.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/select2.min.js') }}"></script>
+    <!--owl carousel-->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/owl.carousel.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/real_state_gridlist.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+/*
+Theme Name: Globals - Material and Bootstrap HTML template
+Module : Directory
+Description: Custom styles are defined in this class
+Author: Jyostna
+Author URI: http://themeforest.net/user/jyostna
+Version: 1.0 
+-------------------------------------------- *//*
+TABLE OF CONTENT
+-------------------------------------------------
+1- REVOLUTION SLIDER STYLES
+---------------------------------------------- */
+
+
+/*========================== REVOLUTION SLIDER STYLES =======================*/
+
+.slide-r-i{
+    font-size: 14px;
+    position: relative;
+    top: 1px;
+}
+.grey_regular_18{
+    font-size: 18px !important;
+}
+.largeredbtn {
+    background: #ff9700 none repeat scroll 0 0 !important;
+    border-radius: 28px !important;
+    color: #ffffff !important;
+    font-family: "roboto",sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+.largeredbtn:hover{
+    background:#00bff3 !important; 
+}
+.slide-doller-img{
+    width: 100% !important;
+    height: 100% !important;
+}
+/*========================== REVOLUTION SLIDER STYLES END =======================*/
