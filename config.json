@@ -1,0 +1,12 @@
+{
+	"mysql": {
+		"host": "localhost",
+		"user": "root",
+		"password": "password",
+		"db_name": "new_db"
+	},
+	"mongo": {
+		"db_name": "newdb",
+		"collection_name": "newcoll"
+	}
+}

@@ -1,16 +1,14 @@
 import os
 import json
-
-db_name = "newdb"
-collection_name = "newcoll"
+from VSdatabase import *
 
 def preprocess(search_query):
-	
+	config = get_config()
 	search_query = search_query.replace('\"', '\\\"')
-	query_text = 'db.' + collection_name + '.find({$text: {$search: "'+ search_query + '"}}, {score: {$meta: "textScore"}}).sort({score:{$meta:"textScore"}}).limit(10);\n'
+	query_text = 'db.' + config['mongo']['collection_name'] + '.find({$text: {$search: "'+ search_query + '"}}, {score: {$meta: "textScore"}}).sort({score:{$meta:"textScore"}}).limit(10);\n'
 
 	f = open("temp/query.js", "w+")
-	f.write("use " + db_name + ";\n")
+	f.write("use " + config['mongo']['db_name'] + ";\n")
 	f.write(query_text)
 	f.close()
 
