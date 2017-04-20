@@ -27,7 +27,7 @@ def search():
     if request.method == "POST":
         search_query = request.form['search_query']
         results = find_results(search_query)
-    return render_template('home.html', results=results, video_playing=video_playing, video_playing_obj=video_playing_obj, user=user)
+    return render_template('home-search.html', results=results, video_playing=video_playing, video_playing_obj=video_playing_obj, user=user)
 
 @app.route("/play_video/<video_id>")
 def play_video(video_id):
@@ -44,7 +44,7 @@ def play_video(video_id):
         user['username'] = None
 
     results = get_similiar_videos(video_id, 10, 0)
-    return render_template('home.html', results=results, video_playing=video_playing, video_playing_obj=video_playing_obj, user=user)
+    return render_template('home-video.html', results=results, video_playing=video_playing, video_playing_obj=video_playing_obj, user=user)
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
@@ -77,6 +77,7 @@ def register():
 
 @app.route("/like/<video_id>")
 def like(video_id):
+
     return video_id
 
 if __name__ == "__main__":
