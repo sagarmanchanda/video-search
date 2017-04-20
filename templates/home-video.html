@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="height:100%;">
 
 <head>
     <!--meta tag css link-->
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/red-color.css') }}">
 </head>
 
-<body>
+<body style="height:100%">
     <!--breadcrumb-->
     <div class="menu-bar">
         <div class="container">
@@ -69,9 +69,6 @@
                                 <div class="col-md-9">
                                     <div class="villa-hed-box">
                                         <h1>{{ video_playing_obj.videoInfo.snippet.title }}</h1>
-                                        <ul class="list-inline">
-                                            <li><span>Description: </span>{{ video_playing_obj.videoInfo.snippet.description }}</li>
-                                        </ul>
                                     </div>
                                 </div>
 
@@ -79,7 +76,7 @@
                                 <div class="col-md-3">
                                     <div class="villa-icon-box">
                                         <div class="villa-green">
-                                            <span class="center-block text-center">{{ video_playing_obj.videoInfo.statistics.likeCount }}</span>
+                                            <span class="center-block text-center">{{ video_playing_obj.videoInfo.statistics.likeCount }}<span class="glyphicon glyphicon-heart"></span> </span>
                                         </div>
 
 																				<ul class="list-inline text-center villa-text">
@@ -136,6 +133,22 @@
 
                         </ul>
                     </div>
+
+                    <div class="contact-doctor">
+                        <ul class="list-unstyled">
+                            <li><h3>Tags</h3>
+                              </li>
+                        </ul>
+                    </div>
+                    <div class="contact-info-box">
+                      <span class="mobile-123">
+
+                          {% for tag in  video_playing_obj.videoInfo.snippet.tags %}
+                            #{{ tag }}
+                          {% endfor %}
+                      </span>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -149,30 +162,32 @@
             <div class="row">
                 <div class="col-md-12 realhome">
                     <div id="offers-slider">
+                      {% for result in results %}
                         <div class="item">
                             <div class="offers-box">
                                 <figure>
                                     <figcaption>
                                     </figcaption>
                                     <div class="meet-img-hover about-meet-img-hover">
-                                        <img src="images/gridlist/house1.png" class="fancy-img  center-block img-responsive" alt="meet-our-team" />
+                                        <img src="{{ result.videoInfo.snippet.thumbnails.high.url }}" class="fancy-img  center-block img-responsive" alt="meet-our-team" />
                                     </div>
                                 </figure>
                                 <div class="offers-small">
-                                  <a href="#">
-                                    <h5>Family House In Hudson</h5>
+                                  <a href="{{ url_for('play_video', video_id=result.videoInfo.id) }}">
+                                    <p class="reli" style="max-height:70px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{ result.videoInfo.snippet.title }}</p>
                                   </a>
                                 </div>
                                 <div class="offers-mini small-box-space">
-                                    <p>Video description</p>
+                                  <p style="max-height:70px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{ result.videoInfo.snippet.description }}</p>
                                     <img src="{{ url_for('static',filename='images/channel.png') }}" alt="agent" class="img-responsive pull-right agent-img" style="width:40px;">
                                 </div>
                                 <div class="offers-bottom">
-                                    <span style="color:#E44546;">100</span>
-                                    <label>Channel name</label>
+                                  <p style="color:#E44546;font-size:12px;"><span class="glyphicon glyphicon-eye-open" />{{ result.videoInfo.statistics.viewCount }} | <span class="glyphicon glyphicon-thumbs-up" />{{ result.videoInfo.statistics.likeCount }}</p>
+                                  <label>{{ result.videoInfo.snippet.channelTitle }}</label>
                                 </div>
                             </div>
                         </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -189,7 +204,7 @@
                     <ol class="breadcrumb copy-right-box">
                         <li>
                             <img src="{{ url_for('static',filename='images/copyright.png') }}" class="copyright-img" alt="copyright">&nbsp; &nbsp; &copy; </li>
-                        <li> 2017 Uppi Dude
+                        <li> 2017
                         </li>
                     </ol>
                 </div>
