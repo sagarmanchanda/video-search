@@ -62,6 +62,7 @@ def find_similiar_thumbnail(image_path):
 		videos[k] = d
 
 	data = sorted(videos, key = videos.get)[:5]
+	print data
 	return map(lambda v: get_video_by_id(v), data)
 
 def connect_to_mysql():
@@ -84,6 +85,11 @@ def set_like_count(video_id, username):
 				""" % (col_name, username)
 	cursor.execute(sql_query)
 	db.commit()
+	sql_query = """
+				UPDATE trending SET likes = likes+1 WHERE video_id = \"%s\";  
+				""" % (video_id)
+	cursor.execute(sql_query)
+	db.commit()
 	db.close()
 
 def get_colname_by_videoid(video_id):
@@ -103,3 +109,13 @@ def get_videoid_by_colname(col_name):
 			break
 	return video_id[:-5]
 
+def update_view_count(video_id):
+	db = connect_to_mysql()
+	cursor = db.cursor()
+	sql_query = """
+				UPDATE trending SET views = views+1 WHERE video_id = \"%s\";  
+				""" % (video_id)
+	cursor.execute(sql_query)
+	db.commit()
+	db.close()
+	
