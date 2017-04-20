@@ -50,10 +50,8 @@ def play_video(video_id):
 def login():
     error = ""
     if request.method == "POST":
-        found_user, user_id = check_user(request.form['l-username'], request.form['l-password'])
-        if found_user:
+        if check_user(request.form['l-username'], request.form['l-password']):
             session['username'] = request.form['l-username']
-            session['user_id'] = user_id
             return redirect(url_for('search'))
         else:
             error = "Incorrect username or password"
@@ -62,7 +60,6 @@ def login():
 @app.route("/logout")
 def logout():
     session.pop('username', None)
-    session.pop('user_id', None)
     return redirect(url_for('search'))
 
 @app.route("/register", methods=['GET', 'POST'])
@@ -78,6 +75,9 @@ def register():
             error = "Passwords did not match."
     return render_template('login-register.html', error=error)
 
+@app.route("/like/<video_id>")
+def like(video_id):
+    return video_id
 
 if __name__ == "__main__":
     app.secret_key = '12345678'

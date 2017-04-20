@@ -30,6 +30,9 @@
 			<!-- You can play with the object video_playing_obj and extract anything -->
 			<img src = "{{ video_playing_obj.videoInfo.snippet.thumbnails.default.url }}" >
 			<h3>{{ video_playing_obj.videoInfo.id }}</h3>
+			{% if user.logged_in %}
+			<a href="{{ url_for('like', video_id=video_playing_obj.videoInfo.id) }}">Like this video</a>
+			{% endif %}
 		{% else %}
 			<p>Click on some video to play it!</p>
 		{% endif %}
