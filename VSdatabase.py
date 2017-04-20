@@ -2,6 +2,22 @@ from pymongo import *
 from py2neo import Graph
 import MySQLdb
 import json
+import imagehash
+from PIL import Image
+
+def loadThumbnailHashes():
+	t = {}
+	client = MongoClient()
+	db = client['newdb']
+	videos = db['newcoll']
+	result = videos.find({}, {'thumbnailHash':1, 'videoInfo.id':1})
+	client.close()
+	for r in result:
+		if 'thumbnailHash' not in r:
+			r['thumbnailHash'] = '0'*16
+		t[r['videoInfo']['id']] = r['thumbnailHash']
+		
+	return t
 
 def get_config():
 	f = open("config.json", "r")
@@ -33,6 +49,20 @@ def get_similiar_videos(video_id, n_videos = 1, n_common_tags = 1, n_similiar_de
 
 	data = graph.data(query)	
 	return map(lambda v: get_video_by_id(v["id"]), data)
+
+tHashMap = loadThumbnailHashes()
+
+def find_similiar_thumbnail(image_path):
+	image_hash = imagehash.average_hash(Image.open(image_path))
+
+	videos = {}
+	for k,v in tHashMap.items():
+		h = imagehash.hex_to_hash(v)
+		d = h - image_hash
+		videos[k] = d
+
+	data = sorted(videos, key = videos.get)[:5]
+	return map(lambda v: get_video_by_id(v), data)
 
 def connect_to_mysql():
 	config = get_config()
@@ -72,3 +102,4 @@ def get_videoid_by_colname(col_name):
 			video_id = key
 			break
 	return video_id[:-5]
+
