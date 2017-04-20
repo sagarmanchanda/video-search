@@ -43,7 +43,13 @@ def play_video(video_id):
         user['logged_in'] = False
         user['username'] = None
 
-    results = get_similiar_videos(video_id, 10, 0)
+    results_neo4j = get_similiar_videos(video_id, 10, 0)
+
+    if 'username' in session:
+        results_collab = collab_recommendation(session['username'], 10)
+
+    results = results_neo4j[:4] + results_collab[:5] + results_neo4j[5:] + results_collab[6:] 
+
     return render_template('home-video.html', results=results, video_playing=video_playing, video_playing_obj=video_playing_obj, user=user)
 
 @app.route("/login", methods=['GET', 'POST'])
@@ -77,8 +83,9 @@ def register():
 
 @app.route("/like/<video_id>")
 def like(video_id):
-
-    return video_id
+    if 'username' in session:
+        set_like_count(video_id, session['username'])
+    return redirect(url_for('play_video', video_id=video_id))
 
 if __name__ == "__main__":
     app.secret_key = '12345678'
