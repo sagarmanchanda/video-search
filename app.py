@@ -27,6 +27,9 @@ def search():
     if request.method == "POST":
         search_query = request.form['search_query']
         results = find_results(search_query)
+    else:
+        if 'username' in session:
+            results = collab_recommendation(session['username'], 10)
     return render_template('home-search.html', results=results, video_playing=video_playing, video_playing_obj=video_playing_obj, user=user)
 
 @app.route("/play_video/<video_id>")
@@ -35,6 +38,8 @@ def play_video(video_id):
     video_playing = True
     video_playing_obj = get_video_by_id(video_id)
     user = {}
+    results_collab = []
+    results_neo4j = []
 
     if 'username' in session:
         user['logged_in'] = True
@@ -47,8 +52,10 @@ def play_video(video_id):
 
     if 'username' in session:
         results_collab = collab_recommendation(session['username'], 10)
-
-    results = results_neo4j[:4] + results_collab[:5] + results_neo4j[5:] + results_collab[6:] 
+        results = results_neo4j[:4] + results_collab[:5] + results_neo4j[5:] + results_collab[6:]
+     
+    else:
+        results  = results_collab
 
     return render_template('home-video.html', results=results, video_playing=video_playing, video_playing_obj=video_playing_obj, user=user)
 
