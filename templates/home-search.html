@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="height:100%;">
 
 <head>
     <!--meta tag css link-->
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/red-color.css') }}">
 </head>
 
-<body>
+<body style="height:100%;">
     <!--Left Menu Button-->
 
     <!--wrapper -->
@@ -96,7 +96,7 @@
                                                 <!-- content title -->
                                                 <div class="sa-content-title">
                                                     <a href="{{ url_for('play_video', video_id=result.videoInfo.id) }}">
-                                                        <p class="reli">{{ result.videoInfo.snippet.title }}</p>
+                                                        <p class="reli" style="max-height:70px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{ result.videoInfo.snippet.title }}</p>
                                                     </a>
                                                 </div>
                                                 <!-- ./content title -->
@@ -141,19 +141,12 @@
                                             <input type="text" class="form-control" id="search_query" name="search_query">
                                             <span class="material-input"></span></div>
                                     </li>
-                                    <!--<li>
+                                    <li>
                                         <div class="form-group">
                                             <select id="select1" class="form-control">
-                                                <option class="sa-select" selected>Real Estate</option>
-                                                <option class="sa-select">Automotive</option>
-                                                <option class="sa-select">Restaurant</option>
-                                                <option class="sa-select">Job</option>
-                                                <option class="sa-select">Hotels &amp; Travel</option>
-                                                <option class="sa-select">Shopping</option>
-                                                <option class="sa-select">Pets</option>
-                                                <option class="sa-select">Services</option>
+                                                <option class="sa-select" selected>Categories</option>
                                             </select><span class="material-input"></span></div>
-                                    </li>-->
+                                    </li>
                                 </ul>
                             </div>
                             <!-- ./contents -->
@@ -288,7 +281,7 @@
                     <ol class="breadcrumb copy-right-box">
                         <li>
                             <img src="{{ url_for('static',filename='images/copyright.png') }}" class="copyright-img" alt="copyright">&nbsp; &nbsp; &copy; </li>
-                        <li> 2017 Uppi Dude
+                        <li> 2017
                         </li>
                     </ol>
                 </div>
