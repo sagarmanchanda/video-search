@@ -1,0 +1,15 @@
+@media(max-width: 768px) {
+    .media-body {
+        float: left;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 425px) {
+    .media-body {
+        float: left;
+        width: 100%;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,417 @@
+/*
+Theme Name: Globals - Material and Bootstrap HTML template
+Module : Directory
+Description: Custom styles are defined in this class
+Author: Jyostna
+Author URI: http://themeforest.net/user/jyostna
+Version: 1.0 
+-------------------------------------------- *//*
+TABLE OF CONTENT
+-------------------------------------------------
+1- JOB PAGE STYLES
+2- AUTOMOTIVE DETAILS FAQ PAGE STYLES
+3- AUTOMOTIVE REVIEW FAQ PAGE STYLES
+---------------------------------------------- */
+
+/*========================== JOB PAGE STYLES =======================*/
+
+.villa-hed-box li i {
+    color: #00bff3;
+}
+.send-msg-doctor-input1 {
+    background-image: linear-gradient(#00bff3, #00bff3)!important;
+}
+.send-msg-doctor-input2 {
+    background-image: linear-gradient(#00bff3, #00bff3) !important;
+}
+
+.nav>.feature-li.active {
+    border-top: 3px solid #00bff3;
+}
+.nav>.feature-li.active a {
+    color: #00bff3 !important;
+}
+
+.nav>.feature-li:hover {
+    border-top: 3px solid #00bff3;
+}
+.nav>.feature-li:hover a{
+    color: #00bff3 !important;
+}
+.hover-btn1{
+    background-color: #00afdf;
+}
+.hover-btn2{
+    background-color: #07b6e6;
+}
+.hover-btn3{
+    background-color: #00bff3;
+}
+.offers-small{
+	border-top: 5px solid #00bff3;
+}
+.owl-theme .owl-controls .owl-page.active span {
+    background-color: #00bff3 !important;
+}
+.offers-box:hover .offers-small h5 {
+    color: #00bff3;
+}
+.show-offer-btn span {
+    color: #00bff3 !important;
+}
+.footer-copy-right li a:hover {
+    color: #00bff3;
+}
+.subscribe-box:hover {
+    border-bottom: 2px solid #00bff3;
+}
+.mobile-123:hover {
+    color: #00bff3;
+}
+.rating-icons li i{
+  color: #ff9700;
+  font-size: 22px;
+  margin-left: -10px;
+}
+.rating-box{
+background-color: #ffffff;
+padding: 20px 40px 20px 40px;
+text-align: center;
+margin-top: 22.3%;
+margin-bottom: 30px;
+}
+.rate-li{
+	color: #9699a6;
+	font-weight: normal;
+}
+.rate-li span{
+	color: #cdcfd7;
+}
+.contact-doctor {
+    margin-top: 0;
+}
+
+/*========================== JOB PAGE STYLES END =======================*/
+
+/*========================== AUTOMOTIVE DETAILS FAQ PAGE STYLES =======================*/
+
+.i {
+    color: #cdcfd7;
+    font-size: 25px;
+    margin-top: -4px;
+}
+
+a[aria-expanded="true"] h4 {
+    color: #00bff3 !important;
+}
+
+.mdi-hardware-keyboard-arrow-up {
+    color: #00bff3;
+}
+
+.panel>.panel-heading,
+.panel-default>.panel-heading {
+    background-color: transparent;
+    margin: -15px;
+}
+
+.panel-group .panel-heading+.panel-collapse>.list-group,
+.panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: 0;
+}
+
+.panel-body {
+    padding: 0 !important;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.panel-heading {
+    padding: 5px 15px !important;
+}
+
+.panel {
+    border: 0;
+    box-shadow: none !important;
+    background-color: #f6f0e4;
+}
+
+.answer-h1:hover .i {
+    color: #00bff3;
+}
+
+a .i:focus {
+    color: #00bff3 !important;
+}
+
+
+/*section5 quick answer*/
+
+.quick-answer {
+    background-color: #f6f0e4;
+    padding-top: 100px;
+}
+
+.advantage-heading {
+    color: #31364c;
+    font-size: 46px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding-bottom: 17px;
+    margin-top: 0;
+}
+
+.advantage-text {
+    color: #9699a6;
+    padding-bottom: 9.6%;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.answer-h1 {
+    color: #31364c;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    font-weight: 400;
+}
+
+.up-icon {
+    margin-top: -30px;
+    color: #d9d0bb;
+}
+
+.answer-row1:hover .up-icon {
+    color: #93c25e;
+}
+
+.answer-row1:hover .answer-h1 {
+    color: #93c25e;
+}
+
+.answer-text1 {
+    color: #9da0ab;
+    line-height: 23px;
+}
+
+.answer-border {
+    color: #efe7d8 !important;
+    border-top: 1px solid #f5f5f5 !important;
+    margin-top: 8px !important;
+    margin-bottom: 27px !important;
+}
+
+.panel-body {
+    padding: 0 !important;
+    font-weight: normal;
+}
+
+.panel-heading {
+    padding: 5px 15px !important;
+}
+
+.panel {
+    /* border-radius: 2px; */
+    border: 0;
+    box-shadow: none !important;
+    background-color: #ffffff;
+}
+.faq-tab-sec{
+	padding: 50px 30px 40px 30px;
+}
+/*========================== AUTOMOTIVE DETAILS FAQ PAGE STYLES END =======================*/
+
+
+/*========================== AUTOMOTIVE REVIEW FAQ PAGE STYLES =======================*/
+
+.review-box1{
+	padding: 30px;
+}
+.view-user-comment{
+	background-color: #fafafa;
+	border-radius: 24px;
+	padding: 30px;
+	 margin-left: 16px;
+}
+.view-user-comment ul li span{
+   color: #31364c;
+   font-size: 16px;
+   font-weight: bold;
+}
+.view-user-comment ul li{
+	color: #cdcfd7;
+	font-weight: normal;
+}
+.view-user-comment ul li i{
+	color: #31364c;
+	 margin-right: -13px;
+}
+.view-user-comment ul li label{
+	color: #cdcfd7;
+	font-weight: 400;
+	position: relative;
+    top: -8px;
+    margin-right: 15px;
+}
+.view-user-comment p{
+	color: #9699a6;
+	margin-top: 13px;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+.review-box1{
+	border-top: 1px solid #f5f5f5;
+}
+.user-rating{
+	font-weight: normal;
+	padding-top: 30px;
+}
+.user-rating .rating-icons li i{
+	margin-left: -7px;
+    margin-right: -7px;
+}
+.user-rating p{
+	color: #9699a6;
+	font-size: 12px;
+	margin-bottom: 3px;
+}
+.user-rating li{
+	color: #cdcfd7;
+	font-size: 12px;
+}
+.user-rating li span{
+	color: #9699a6;
+	font-size: 12px;
+}
+.view-user-comment {
+	position: relative;
+	background: #fafafa;
+}
+.view-user-comment:after {
+	right: 100%;
+	top: 30%;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(250, 250, 250, 0);
+	border-right-color: #fafafa;
+	border-width: 10px;
+	margin-top: -10px;
+}
+
+.doctor-send-msg-btn {
+    background-color:#00AFDF !important;
+}
+.villa-slider-heading{
+    border-bottom: 1px solid #ebebeb;
+}
+.job-description-sec{
+    background-color: #ffffff;
+}
+.job-feature-sec{
+    padding: 5px 30px 30px 30px;
+}
+.job-feature-sec h4{
+   color: #31364c;
+   font-size: 30px;
+    margin-bottom: 11%;
+}
+.job-feature-ul .done-li i{
+    color: #ccdb38;
+    font-size: 20px;
+    position: relative;
+    top: 4px;
+}
+.job-feature-ul .clear-li i{
+    color: #f04e4e;
+    font-size: 20px;
+    position: relative;
+    top: 4px;
+}
+.job-feature-ul li{
+    color: #9699a6;
+    font-weight: normal;
+    margin-top: 15px;
+}
+.job-responsible{
+   padding: 0 10px 20px 30px;
+}
+.job-responsible h4{
+    color: #31364c;
+    font-size: 30px;
+    margin-top: 0;
+}
+.job-responsible p{
+    color: #9699a6;
+    font-weight: normal;
+    line-height: 23px;
+}
+.job-responsible-li{
+    padding: 0 10px 30px 60px;
+}
+.res-ul-sec p{
+    color: #31364c;
+    font-weight: normal;
+    margin-left: 10%;
+    line-height: 23px;
+}
+.job-responsible-li i{
+    font-size: 20px;
+}
+.responsive-box{
+    margin-top: 23px;
+}
+.sub-p-pad{
+    padding-bottom: 6%;
+}
+.left-side-sticker{
+    padding: 35px 35px 35px 25px;
+    background-color: #f5f5f5;
+    margin-top: 22.4%;
+    margin-bottom: 30px;
+}
+
+@media only screen and (min-width:320px) and (max-width: 800px) {
+
+    .left-side-sticker {
+        padding: 35px 35px 35px 25px;
+        background-color: #f5f5f5;
+        margin-top: 6.4% !important;
+        margin-bottom: 30px;
+    }
+
+    .list-inline {
+        padding-left: 0;
+        margin-left: -5px;
+        list-style: none;
+        margin-bottom: 18px !important;
+    }
+
+    .app {
+        background-color: #f04e4e;
+        padding-top: 35px;
+        padding-bottom: 13px !important;
+    }
+
+    #logo-sec .owl-pagination {
+        float: right;
+        top: -1px !important;
+        position: relative;
+    }
+
+    .sub-p-pad {
+        padding-bottom: 0% !important;
+    }
+
+    .job-feature-sec h4 {
+        color: #31364c;
+        font-size: 30px;
+        margin-bottom: 5% !important;
+    }
+
+}
+
+/*========================== AUTOMOTIVE REVIEW FAQ PAGE STYLES END =======================*/

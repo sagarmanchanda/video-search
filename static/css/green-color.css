@@ -1,0 +1,157 @@
+/*
+Theme Name: Globals - Material and Bootstrap HTML template
+Module : Directory
+Description: Custom styles are defined in this class
+Author: Jyostna
+Author URI: http://themeforest.net/user/jyostna
+Version: 1.0 
+-------------------------------------------- *//*
+TABLE OF CONTENT
+-------------------------------------------------
+1- FOOTER STYLES
+2- BANNER BUTTON STYLES   
+
+---------------------------------------------- */
+
+
+/*========================== FOOTER STYLES =======================*/
+
+.hover-green .read-more:hover {
+    color: #ccdb38 !important;
+    cursor: pointer;
+}
+
+.hover-green a{color: #9699a6 !important;}
+
+.hover-green a:hover{color: #ccdb38 !important;}
+
+
+.hover-green{background-color: #ccdb38 !important;}
+
+.hover-green:hover{background-color: #c3d22f !important;}
+
+.menu-plus-btn {
+    background-color: #ccdb38 !important;
+    border-radius: 50%;
+    color: #ffffff !important;
+    height: 70px;
+    position: relative;
+    right: 23px;
+    top: 82px;
+    width: 70px;
+    z-index: 30;
+}
+
+.menu-plus-btn:hover{
+    background-color: #c3d22f !important;
+}
+
+.btn-section li span:hover {
+    color: #ccdb38  !important;
+}
+
+.home_form_restaurant .form-group .material-icons:hover {
+    color: #ccdb38 !important;
+    direction: ltr;
+    display: inline-block;
+    font-family: "Material Icons";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+
+.home_form_restaurant .sa-main-filter-styles .sa-filter-content .form-control {
+    background-image: linear-gradient(#ccdb38, #ccdb38), linear-gradient(#d2d2d2, #d2d2d2) !important;
+}
+
+
+.home_form_restaurant .sa-main-filter-styles .sa-filter-content .checkbox input[type="checkbox"]:checked + .checkbox-material .check::before, .sa-main-filter-styles .sa-filter-content .checkbox-default input[type="checkbox"]:checked + .checkbox-material .check::before {
+    color: #ccdb38 !important;
+}
+
+
+.sa-btn-filter:not(.btn-link):not(.btn-flat) {
+    background: #c3d22f none repeat scroll 0 0;
+    border-radius: 32px;
+    color: #ffffff;
+    font-size: 16px;
+    height: 54px;
+    margin: auto;
+    text-transform: capitalize;
+    width: 210px;
+}
+
+.sa-btn-filter:hover:not(.btn-link):not(.btn-flat) {
+    background-color: #ccdb38 !important;
+}
+
+/*========================== FOOTER STYLES END  =======================*/
+
+/*========================== BANNER BUTTON STYLES    =======================*/
+
+
+.restaurant_info .form-group .form-control:focus, .form-group-default .form-control:focus {
+    background-image: linear-gradient(#ccdb38, #ccdb38), linear-gradient(#d2d2d2, #d2d2d2) !important;
+}
+
+.shoping12 .form-group .form-control:focus, .form-group-default .form-control:focus {
+    background-image: linear-gradient(#582aa6, #582aa6), linear-gradient(#d2d2d2, #d2d2d2) !important;
+}
+
+
+
+.home_form_restaurant .form-control {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(#009688, #009688), linear-gradient(#d2d2d2, #d2d2d2) !important;
+    background-position: center bottom, center calc(100% - 1px);
+    background-repeat: no-repeat;
+    background-size: 0 2px, 100% 1px;
+    border: 0 none;
+    border-radius: 0;
+    box-shadow: none;
+    float: none;
+    transition: background 0s ease-out 0s;
+}
+.form-group .form-control:focus, .form-group-default .form-control:focus{
+    background-image: linear-gradient(#ccdb38, #ccdb38), linear-gradient(#d2d2d2, #d2d2d2) !important;
+}
+
+.owl-theme .owl-controls .owl-page.active span{
+    background-color: #C3D22F !important;
+}
+.doctor-send-msg-btn {
+    background-color: #C3D22F !important;
+}
+.hover-icon:hover{
+    color: #C3D22F !important;
+}
+#map-sort .list-all a[aria-expanded="true"] {
+    color: #C3D22F !important;
+}
+
+.list-all li.active {
+    border-top: 3px solid #C3D22F;
+}
+.list-all > li:hover {
+    border-top: 3px solid #C3D22F;
+}
+
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color: #C3D22F !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: rgb(189, 189, 189) !important;
+}
+.select2-container--default .select2-selection--single {
+    border-bottom: 1px solid rgb(204, 207, 215);
+}
+
+
+/*========================== BANNER BUTTON STYLES  END =======================*/

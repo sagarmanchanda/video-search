@@ -27,7 +27,7 @@ def search():
     if request.method == "POST":
         search_query = request.form['search_query']
         results = find_results(search_query)
-    return render_template('home.html', results=results, video_playing=video_playing, video_playing_obj=video_playing_obj, user=user)
+    return render_template('home-search.html', results=results, video_playing=video_playing, video_playing_obj=video_playing_obj, user=user)
 
 @app.route("/play_video/<video_id>")
 def play_video(video_id):
@@ -43,17 +43,21 @@ def play_video(video_id):
         user['logged_in'] = False
         user['username'] = None
 
-    results = get_similiar_videos(video_id, 10, 0)
-    return render_template('home.html', results=results, video_playing=video_playing, video_playing_obj=video_playing_obj, user=user)
+    results_neo4j = get_similiar_videos(video_id, 10, 0)
+
+    if 'username' in session:
+        results_collab = collab_recommendation(session['username'], 10)
+
+    results = results_neo4j[:4] + results_collab[:5] + results_neo4j[5:] + results_collab[6:] 
+
+    return render_template('home-video.html', results=results, video_playing=video_playing, video_playing_obj=video_playing_obj, user=user)
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     error = ""
     if request.method == "POST":
-        found_user, user_id = check_user(request.form['l-username'], request.form['l-password'])
-        if found_user:
+        if check_user(request.form['l-username'], request.form['l-password']):
             session['username'] = request.form['l-username']
-            session['user_id'] = user_id
             return redirect(url_for('search'))
         else:
             error = "Incorrect username or password"
@@ -62,7 +66,6 @@ def login():
 @app.route("/logout")
 def logout():
     session.pop('username', None)
-    session.pop('user_id', None)
     return redirect(url_for('search'))
 
 @app.route("/register", methods=['GET', 'POST'])
@@ -78,6 +81,11 @@ def register():
             error = "Passwords did not match."
     return render_template('login-register.html', error=error)
 
+@app.route("/like/<video_id>")
+def like(video_id):
+    if 'username' in session:
+        set_like_count(video_id, session['username'])
+    return redirect(url_for('play_video', video_id=video_id))
 
 if __name__ == "__main__":
     app.secret_key = '12345678'

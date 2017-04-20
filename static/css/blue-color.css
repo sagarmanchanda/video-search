@@ -1,0 +1,215 @@
+/*
+Theme Name: Globals - Material and Bootstrap HTML template
+Module : Directory
+Description: Custom styles are defined in this class
+Author: Jyostna
+Author URI: http://themeforest.net/user/jyostna
+Version: 1.0 
+-------------------------------------------- */
+
+
+/*
+TABLE OF CONTENT
+-------------------------------------------------
+1- FOOTER STYLES
+2- BANNER BUTTON STYLES   
+
+---------------------------------------------- */
+
+
+/*========================== FOOTER STYLES =======================*/
+
+.hover-blue .read-more:hover {
+    color: #00afdf !important;
+    cursor: pointer;
+}
+
+.hover-blue a {
+    color: #9699a6 !important;
+}
+
+.hover-blue a:hover {
+    color: #00afdf !important;
+}
+
+.hover-blue {
+    background-color: #00bff3 !important;
+}
+
+.hover-blue:hover {
+    background-color: #00afdf !important;
+}
+
+.menu-plus-btn {
+    background-color: #00bff3 !important;
+    border-radius: 50%;
+    color: #ffffff !important;
+    height: 70px;
+    position: relative;
+    right: 23px;
+    top: 82px;
+    width: 70px;
+    z-index: 30;
+}
+
+.menu-plus-btn:hover {
+    background-color: #00afdf !important;
+}
+
+.btn-section li span:hover {
+    color: #ccdb38 !important;
+}
+
+.largeredbtn_jobs {
+    background: #252525 !important;
+    border-radius: 50% !important;
+    font-weight: normal;
+    font-family: 'roboto', sans-serif;
+    color: #ffffff !important;
+    padding: 10px 12px;
+}
+
+
+/*========================== FOOTER STYLES END =======================*/
+
+
+/*========================== BANNER BUTTON STYLES =======================*/
+
+.largeredbtn_jobs:hover {
+    background: #017b9c none repeat scroll 0 0 !important;
+}
+
+.btn-section li span:hover {
+    color: #00afdf !important;
+}
+
+.job .sa-main-filter-styles .sa-filter-content .checkbox input[type="checkbox"]:checked + .checkbox-material .check::before,
+.sa-main-filter-styles .sa-filter-content .checkbox-default input[type="checkbox"]:checked + .checkbox-material .check::before {
+    color: #00bff3 !important;
+}
+
+.job .form-group .material-icons:hover {
+    color: #00bff3 !important;
+    direction: ltr;
+    display: inline-block;
+    font-family: "Material Icons";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.job .sa-main-filter-styles .sa-filter-content .form-control {
+    background-image: linear-gradient(#00bff3, #00bff3), linear-gradient(#d2d2d2, #d2d2d2) !important;
+}
+
+
+/*jobs*/
+
+.job .col-md-12 > .sa-gridlist-item:hover .sa-content-price .contact {
+    background: #00bff3 !important;
+}
+
+.job .sa-gridlist-item .sa-grid-over li.sa-realestate-c-bg {
+    background: #00afdf none repeat scroll 0 0 !important;
+}
+
+.job .col-md-12 > .sa-gridlist-item .sa-content-img {
+    border-left: 5px solid #00bff3;
+    border-bottom: 0;
+}
+
+.job .col-md-4 > .sa-gridlist-item .sa-content-img {
+    border-bottom: 5px solid #00bff3;
+}
+
+.job .sa-gridlist-item .sa-realestate-c-bg {
+    background: #00afdf none repeat scroll 0 0 !important;
+}
+
+.job .sa-gridlist-item .sa-realestate-b-bg {
+    background: #07b6e6 none repeat scroll 0 0 !important;
+}
+
+.job .sa-gridlist-item .sa-realestate-bg {
+    background: #00bff3 none repeat scroll 0 0 !important;
+}
+
+.job .sa-gridlist-item:hover .sa-content-title h6 {
+    color: #00bff3 !important;
+}
+
+.job .sa-gridlist-item:hover .sa-content-title h6 {
+    color: #00bff3 !important;
+    transition: ease-in-out all 0.4s;
+    -webkit-transition: ease-in-out all 0.4s;
+    -moz-transition: ease-in-out all 0.4s;
+}
+
+.job .subscribe-btn:hover {
+    background-color: #00bff3 !important;
+    border: 2px solid #00bff3 !important;
+}
+
+.job .form-group .form-control:focus,
+.form-group-default .form-control:focus {
+    background-image: linear-gradient(#00bff3, #00bff3), linear-gradient(#d2d2d2, #d2d2d2) !important;
+}
+
+.job .sa-filter-content .form-control:focus {
+    background-image: linear-gradient(#00bff3, #00bff3), linear-gradient(#d2d2d2, #d2d2d2) !important;
+}
+
+.job .form-control {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(#009688, #009688), linear-gradient(#d2d2d2, #d2d2d2) !important;
+    background-position: center bottom, center calc(100% - 1px);
+    background-repeat: no-repeat;
+    background-size: 0 2px, 100% 1px;
+    border: 0 none;
+    border-radius: 0;
+    box-shadow: none;
+    float: none;
+    transition: background 0s ease-out 0s;
+    font-weight: normal;
+    padding: 7px 0;
+}
+
+.owl-theme .owl-controls .owl-page.active span {
+    background-color: #00BFF3 !important;
+}
+
+.hover-icon:hover {
+    color: #00AFDF !important;
+}
+
+#map-sort .list-all a[aria-expanded="true"] {
+    color: #00AFDF !important;
+}
+
+.list-all li.active {
+    border-top: 3px solid #00AFDF;
+}
+
+.list-all > li:hover {
+    border-top: 3px solid #00AFDF;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #00BFF3 !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: rgb(189, 189, 189) !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border-bottom: 1px solid rgb(204, 207, 215);
+}
+
+
+/*========================== BANNER BUTTON STYLES END=======================*/

@@ -1,6 +1,7 @@
 import os
 import json
 from VSdatabase import *
+from collections import OrderedDict
 
 def preprocess(search_query):
 	config = get_config()
@@ -40,3 +41,43 @@ def find_results(search_query):
 	delete_temp_files()
 
 	return result
+
+def collab_recommendation(username, number_of_results):
+	db = connect_to_mysql()
+	cursor = db.cursor()
+	cursor.execute("SELECT * FROM likes")
+	recommendation_matrix = {}
+	user_rank = {}
+	video_rank = {}
+	for row in cursor.fetchall():
+		recommendation_matrix[row[0]] = row[:]
+		user_rank[row[0]] = 0
+
+	videos_liked_by_user = []
+	for x in range(1,501):
+		video_rank[x] = 0
+		if recommendation_matrix[username][x] == 1:
+			videos_liked_by_user.append(x)
+
+	for video in videos_liked_by_user:
+		for key in recommendation_matrix:
+			if recommendation_matrix[key][video] == 1:
+				user_rank[key] += 1
+
+	user_rank[username] = -1
+	user_rank_sorted = OrderedDict(sorted(user_rank.items(), key=lambda x: x[1]))
+
+	for x in range(1,501):
+		score = 0
+		for key in user_rank_sorted:
+			if recommendation_matrix[key][x] == 1:
+				video_rank[x] += score
+			score += 3
+
+	video_rank_sorted = OrderedDict(sorted(video_rank.items(), key=lambda x: x[1], reverse=True))
+
+	result = []
+	for key in video_rank_sorted:
+		result.append(get_video_by_id(get_videoid_by_colname("vid"+str(key))))
+
+	return result[:number_of_results]

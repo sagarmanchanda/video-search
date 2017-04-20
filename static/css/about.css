@@ -1,0 +1,1437 @@
+/*
+Theme Name: Globals - Material and Bootstrap HTML template
+Module : Directory
+Description: Custom styles are defined in this class
+Author: Jyostna
+Author URI: http://themeforest.net/user/jyostna
+Version: 1.0 
+-------------------------------------------- */
+
+
+/*
+TABLE OF CONTENT
+-------------------------------------------------
+1- IMPORTS
+2- MENUBAR STYLES   
+3- SLIDER STYLES
+4- WE-HELP STYLES
+5- MONITOR STYLES
+6- MEET-OUR-TEAM SECTION
+7- DOWNLOAD APP SECTION
+8- PAYMENT SECTION
+9- TWITTER SECTION
+10- PRICE PLAN SECTION
+11- PRICE PLAN2 SECTION
+12- PRICE PLAN3 SECTION
+---------------------------------------------- */
+
+
+/*========================== IMPORTS =======================*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700);
+
+/*========================== IMPORTS END =======================*/
+
+
+/*========================== MENUBAR STYLES =======================*/
+
+.menu-bar {
+    background-color: #e44546;
+}
+
+.padding-li {
+    padding: 0 0 30px 0;
+}
+
+.menu3 {
+    color: #fff !important;
+}
+
+.menu3:hover {
+    color: #93c25e;
+}
+
+.menu1:hover {
+    color: #93c25e;
+}
+
+.navigation {
+    padding-top: 22px !important;
+    margin-bottom: 0 !important;
+    list-style: none;
+    background-color: #e44546 !important;
+    border-radius: 0;
+}
+
+
+/*========================== MENUBAR STYLES END =======================*/
+
+
+/*========================== SLIDER STYLES =======================*/
+
+.carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: none;
+}
+
+.carousel-control.left {
+    right: 0;
+    left: auto;
+    background-image: none;
+}
+
+
+/*========================== SLIDER STYLES END =======================*/
+
+
+/*========================== WE-HELP STYLES =======================*/
+
+.we-help {
+    background-color: #fafafa;
+    padding-bottom: 6.5%;
+}
+
+.we-help-text {
+    color: #9699a6;
+    font-size: 16px;
+}
+
+.we-help-heading {
+    color: #31364c;
+    font-size: 46px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding-bottom: 30px;
+    margin: 0;
+}
+
+.circle-text .fa-bar-chart {
+    color: #00bff3 !important;
+    font-size: 50px !important;
+    margin-top: 40% !important;
+}
+
+.circle-text .fa-money {
+    color: #ff9700 !important;
+    font-size: 50px !important;
+    margin-top: 40% !important;
+}
+
+.circle-text .fa-desktop {
+    color: #78909c !important;
+    font-size: 50px !important;
+    margin-top: 40% !important;
+}
+
+.circle-text .fa-line-chart {
+    color: #e91d62 !important;
+    font-size: 50px !important;
+    margin-top: 40% !important;
+}
+
+.circle-text .fa-credit-card {
+    color: #ccdb38 !important;
+    font-size: 50px !important;
+    margin-top: 40% !important;
+}
+
+.div-arrow:after {
+    top: 89%;
+    left: 50%;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-top-color: #ff9700;
+    border: 18px solid rgba(255, 151, 0, 0);
+    margin-left: -18px;
+}
+
+.div-arrow2:after {
+    top: 89%;
+    left: 50%;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 151, 0, 0);
+    border-top-color: #00bff3;
+    border: 18px solid;
+    margin-left: -18px;
+}
+
+.div-arrow3:after {
+    top: 89%;
+    left: 50%;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 151, 0, 0);
+    border-top-color: #78909c;
+    border: 18px solid;
+    margin-left: -18px;
+}
+
+.div-arrow4:after {
+    top: 89%;
+    left: 50%;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 151, 0, 0);
+    border-top-color: #e91d62;
+    border: 18px solid;
+    margin-left: -18px;
+}
+
+.div-arrow5:after {
+    top: 89%;
+    left: 50%;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 151, 0, 0);
+    border-top-color: #EEEEEE;
+    border: 18px solid;
+    margin-left: -18px;
+}
+
+.category {
+    background-color: #fafafa;
+}
+
+.coin {
+    border: 3px solid #f6f0e4;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+.coin-img {
+    margin-top: 30px;
+}
+
+.coin-heading {
+    font-size: 30px;
+    color: #31364c;
+}
+
+.coin-text {
+    color: #9ea1ac;
+}
+
+.coin-box {
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+
+.row1-pad {
+    padding-top: 33px;
+    padding-bottom: 33px;
+}
+
+
+/*========================== WE-HELP STYLES END =======================*/
+
+
+/*========================== MONITOR STYLES =======================*/
+
+.monitor {
+    background-color: #ff9700;
+    padding-top: 0;
+}
+
+@media screen and (min-width: 610px) {
+    .monitor {
+        background-color: #ff9700;
+        padding-top: 5.3%;
+    }
+}
+
+.monitor-heading {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding-bottom: 15px;
+    font-size: 46px;
+}
+
+.monitor-text {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.monitor-center {
+    z-index: -5;
+}
+
+
+/*========================== MONITOR STYLES END =======================*/
+
+
+/*========================== MEET-OUR-TEAM SECTION =======================*/
+
+.meet {
+    background-color: #fafafa;
+    padding-top: 5.3%;
+    padding-bottom: 5.4%;
+}
+
+.meet-heading {
+    color: #31364c;
+    padding-bottom: 5px;
+    font-size: 46px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.eye {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}
+
+.meet-text {
+    color: #9699a6;
+    font-size: 16px;
+}
+
+.meet-name {
+    background-color: #f5f5f5;
+    padding-top: 18px;
+    padding-bottom: 10px;
+    margin-left: 7px;
+    margin-right: 8px;
+}
+
+.post {
+    color: #d0d2d9;
+    margin-bottom: -8px !important;
+}
+
+.name {
+    color: #464a5c;
+    font-size: 20px;
+}
+
+.meet-detail {
+    padding-top: 16px;
+    padding-bottom: 11px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f5f5f5;
+    margin-left: 7px;
+    margin-right: 8px;
+}
+
+.detail {
+    color: #9699a6;
+}
+
+.meet-icons li.follow-facebook {
+    background: #3a5ba2;
+}
+
+.meet-icons li.follow-twitter {
+    background-color: #1fc0f0;
+}
+
+.meet-icons li.follow-google-plus {
+    background-color: #e1584b;
+}
+
+.meet-icons li.follow-pinterest {
+    background-color: #c33c2d;
+}
+
+.meet-icons li {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-right: 1px;
+}
+
+.meet-icons {
+    padding-left: 36.4%;
+}
+
+@media screen and (min-width: 610px) {
+    .meet-icons {
+        padding-left: 90px;
+    }
+}
+
+.face {
+    margin-left: 2px !important;
+}
+
+.awesome {
+    color: #ffffff;
+    margin-top: 4px;
+    margin-left: -1px;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 15px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flickr-so-icon {
+    margin-top: -5px;
+}
+
+.pint {
+    margin-top: 4px;
+    margin-left: -1px;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 25px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.meet-logo {
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 7px;
+    margin-right: 8px;
+    margin-bottom: 10%;
+}
+
+.jess {
+    margin-top: -1px;
+}
+
+.box1:hover .meet-name {
+    background-color: #292d31;
+}
+
+.box1:hover .post {
+    color: #cdcfd7;
+}
+
+.box1:hover .name {
+    color: #769b51;
+}
+
+.box1:hover .meet-img-hover {
+    background-color: #292d31;
+}
+
+.meet-img-hover {
+    margin-left: 7px;
+    margin-right: 8px;
+}
+
+.box1:hover .meet-detail {
+    -webkit-box-shadow: -1px 11px 42px -11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 11px 42px -11px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 11px 42px -11px rgba(0, 0, 0, 0.75);
+}
+
+.box1:hover .meet-logo {
+    -webkit-box-shadow: -1px 11px 42px -11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 11px 42px -11px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 11px 42px -11px rgba(0, 0, 0, 0.75);
+}
+
+.box1:hover .fancy-img {
+    opacity: 0.4;
+}
+
+
+/*fancy box*/
+
+.fancy-a {
+    outline: none;
+}
+
+.fancy-img {
+    margin-top: -2px;
+}
+
+div#fancy_outer {
+    width: 488px !important;
+    height: 340px !important;
+}
+
+
+/*image hover*/
+
+figure {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+
+/** hover button css **/
+
+.hover-btn1 {
+    background-color: #98c565;
+    width: 40px;
+    height: 40px;
+    margin-left: -4px;
+    margin-top: 38%;
+}
+
+@media screen and (min-width: 610px) {
+    .hover-btn1 {
+        background-color: #98c565;
+        width: 40px;
+        height: 40px;
+        margin-left: -4px;
+        margin-top: 48%;
+    }
+}
+
+
+/** hover button css end **/
+
+
+/* With transition support, animate the image */
+
+figcaption:hover {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    position: absolute;
+    z-index: 9999;
+    cursor: default;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+figcaption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.box1:hover .btn-h {
+    opacity: 1;
+}
+
+.btn-h {
+    opacity: 0;
+}
+
+
+/*figure*/
+
+figure:hover > figcaption {
+    opacity: 1;
+}
+
+figcaption p {
+    position: relative;
+    top: 40%;
+    color: #fff;
+    font-size: 22px;
+    text-shadow: 0 0 20px #000000;
+}
+
+figcaption span {
+    display: block;
+    font-size: 50px;
+    margin-bottom: 6px;
+}
+
+
+/*========================== MEET-OUR-TEAM SECTION END =======================*/
+
+
+/*========================== DOWNLOAD APP SECTION =======================*/
+
+.boxer {
+    text-align: center;
+}
+
+#boxer .boxer-caption.gallery p {
+    padding-top: 18px !important;
+    text-align: center !important;
+}
+
+#boxer .boxer-caption p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+#boxer {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 101;
+    border-radius: 0 !important;
+    box-shadow: 0 0 25px #000;
+    opacity: 0;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.boxer-open #boxer-overlay {
+    opacity: 0.90 !important;
+}
+
+.app {
+    background-color: #f04e4e;
+    padding-top: 35px;
+}
+
+.app-img {
+    margin-bottom: -1px;
+}
+
+.app-heading {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-top: 8.3%;
+}
+
+.app-sub-heading {
+    color: #ffffff;
+    font-size: 27px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-top: -8px;
+}
+
+.app-icon {
+    color: #ffffff;
+    font-size: 34px;
+    margin-left: 30px;
+    position: relative;
+    top: 4px;
+}
+
+.app-icon1 {
+    color: #ffffff;
+    font-size: 34px !important;
+    position: relative;
+    top: 4px;
+}
+
+.app-text {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+
+/*========================== DOWNLOAD APP SECTION END =======================*/
+
+
+/*========================== PAYMENT SECTION =======================*/
+
+.payment {
+    background-color: #fff;
+    padding-bottom: 6.0%;
+}
+
+#owl-demo .item img {
+    display: block;
+    height: auto;
+}
+
+.payment-heading {
+    color: #31364c;
+    font-size: 46px;
+    margin-top: 6.1%;
+    padding-bottom: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.payment-text {
+    color: #9699a6;
+    font-size: 16px;
+}
+
+#logo-sec .owl-pagination {
+    float: right;
+    top: -40px;
+    position: relative;
+}
+
+#meet-owl-sec .owl-pagination {
+    float: right;
+    top: -40px;
+    position: relative;
+}
+
+
+/*========================== PAYMENT SECTION END =======================*/
+
+
+/*========================== TWITTER SECTION =======================*/
+
+.twitter {
+    background-color: #00bff3;
+    padding-top: 55px;
+    padding-bottom: 38px;
+}
+
+.twitter-icon {
+    color: #ffffff;
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.twitter-text {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 610px) {
+    .twitter-text {
+        color: #ffffff;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+        margin-left: -20px;
+    }
+}
+
+.twitter-text2 {
+    margin-left: 10px;
+    color: #5bdcff;
+    font-size: 15px;
+    margin-top: -7px;
+}
+
+@media screen and (min-width: 610px) {
+    .twitter-text2 {
+        margin-left: -20px;
+        color: #5bdcff;
+        font-size: 15px;
+        margin-top: -7px;
+    }
+}
+
+.slotholder {
+    height: 86% !important;
+}
+
+.grey_regular_18 {
+    font-size: 18px !important;
+}
+
+@media screen and (min-width: 610px) {
+    .grey_regular_18 {
+        font-size: 16px !important;
+    }
+}
+
+.back-img {
+    height: 600px !important;
+}
+
+.largeredbtn {
+    background: #252525 !important;
+    border-radius: 28px !important;
+    font-weight: normal;
+    font-family: 'roboto', sans-serif;
+    padding: 12% 30.8%!important;
+    color: #ffffff !important;
+}
+
+.largeredbtn:hover {
+    background: #00bff3 !important;
+}
+
+.man-img {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.footer-copy-right {
+    background-color: #25292C !important;
+    padding: 0;
+    font-weight: normal;
+}
+
+.about_us {
+    background-color: #fafafa !important;
+    padding-bottom: 70px;
+}
+
+.about_us h4 {
+    color: #31364c;
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.about_us p {
+    color: #9699a6;
+    font-weight: 400;
+}
+
+.review {
+    background-image: url("../images/about_icon/preview.jpg");
+    padding-bottom: 6.0%;
+    padding-top: 5.4%;
+}
+
+.review h4 {
+    color: #fff !important;
+}
+
+.about_us .btn-default {
+    background-color: #f2f3f5 !important;
+    border-color: #ccc;
+    border-radius: 39px;
+    padding: 5px 13px 7px;
+    text-transform: capitalize;
+}
+
+.icon {
+    font-size: 12px !important;
+    position: relative;
+    top: -1px;
+}
+
+.comment-bg2::after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #fff rgba(156, 38, 176, 0) rgba(156, 38, 176, 0);
+    border-image: none;
+    border-style: solid;
+    border-width: 12px;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -12px;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    width: 0;
+}
+
+.comment-bg3::after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #fff rgba(156, 38, 176, 0) rgba(156, 38, 176, 0);
+    border-image: none;
+    border-style: solid;
+    border-width: 12px;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -12px;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    width: 0;
+}
+
+.comment-bg3 {
+    background-color: #fff;
+}
+
+.comment-bg3 {
+    background: #fff none repeat scroll 0 0;
+    position: relative;
+}
+
+.comment-bg2 {
+    background-color: #fff;
+}
+
+.comment-bg2 {
+    background: #fff none repeat scroll 0 0;
+    position: relative;
+}
+
+.about_us .btn-default:hover {
+    background-color: #f04e4e !important;
+    border-color: #ccc;
+    color: #fff !important;
+    padding: 5px 13px 7px;
+    border-radius: 39px;
+}
+
+.monitorabout {
+    background-color: #fafafa !important;
+    padding-top: 3.92%;
+}
+
+.monitorabout h1 {
+    color: #31364c;
+}
+
+.monitorabout p {
+    color: #9699a6;
+}
+
+.customer-review-h {
+    color: #ffffff;
+    font-family: "roboto", sans-serif;
+    font-size: 42px;
+    font-weight: 300;
+    margin: 0 0 18px;
+}
+
+.customer-review-p {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.viewer-site {
+    color: #77e2ff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.db-pricing-eleven .price_a {
+    background-color: #f8c407 !important;
+}
+
+.db-pricing-eleven .type2_2 {
+    background-color: #fecc17;
+    font-family: "roboto", sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    padding: 43px 40px 7px 0;
+    text-align: center;
+}
+
+.about_us .fa {
+    display: inline-block;
+    font: 23px/1 FontAwesome;
+    margin-left: 4px;
+    margin-top: 0 !important;
+    text-rendering: auto;
+}
+
+
+/*========================== TWITTER SECTION END =======================*/
+
+
+/*========================== PRICE PLAN SECTION =======================*/
+
+.pricing-plans1 {
+    padding-top: 5.4%;
+}
+
+.pricing-heading {
+    color: #31364c;
+    font-size: 46px;
+    padding-bottom: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.invest-text {
+    color: #9699a6;
+    font-size: 16px;
+    margin-bottom: 3%;
+    font-weight: normal;
+}
+
+.invest-p {
+    color: #9ea1ac;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.invest-btn {
+    background-color: #f04e4e !important;
+    color: #ffffff !important;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.invest-btn2 {
+    background-color: #fecc17 !important;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: #ffffff !important;
+}
+
+.invest-btn2-price3 {
+    background-color: #fecc17 !important;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: #ffffff !important;
+}
+
+.invest-btn3-price3 {
+    background-color: #ccdb38 !important;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: #ffffff !important;
+}
+
+.invest-btn4-price3 {
+    background-color: #00bff3 !important;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: #ffffff !important;
+}
+
+.invest-btn3 {
+    background-color: #ccdb38 !important;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: #ffffff !important;
+}
+
+.invest-btn4 {
+    background-color: #00bff3 !important;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: #ffffff !important;
+}
+
+.calendar {
+    margin-top: -13px;
+}
+
+.satndart-heading {
+    font-weight: bold;
+}
+
+.invest-btn-box {
+    background-color: #f5f5f5;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    text-align: center;
+}
+
+.box1-text {
+    padding: 18px 0 40px;
+}
+
+
+/*============================================================
+BACKGROUND COLORS
+============================================================*/
+
+.db-bk-color-one {
+    background-color: #ffffff;
+}
+
+.db-bk-color-two {
+    background-color: #ffffff;
+}
+
+.db-bk-color-three {
+    background-color: #ffffff;
+}
+
+.db-bk-color-six {
+    background-color: #ffffff;
+}
+
+
+/*PRICING STYLES*/
+
+.db-padding-btm {
+    padding-bottom: 6.1%;
+}
+
+.db-button-color-square {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.50);
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+.db-button-color-square:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.50);
+    border: none;
+}
+
+.db-pricing-eleven {
+    margin-bottom: 30px;
+    margin-top: 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    color: #fff;
+    line-height: 30px;
+}
+
+.db-pricing-eleven ul {
+    list-style: none;
+    margin: 0;
+    /*    text-align: center;*/
+    padding-left: 0;
+}
+
+.db-pricing-eleven ul li {
+    cursor: pointer;
+    padding: 0 23px 10px 21px;
+}
+
+.shared-li:last-child {
+    border: medium none;
+}
+
+.db-pricing-eleven ul li i {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.db-pricing-eleven .price {
+    background-color: red;
+    padding: 1px 20px 2px 20px;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+.db-pricing-eleven .price1 {
+    background-color: #c3d22f;
+    padding-bottom: 10px;
+}
+
+.db-pricing-eleven .price1 {
+    background-color: #c3d22f;
+    padding-bottom: 10px;
+}
+
+.db-pricing-eleven .price2 {
+    background-color: #dd4344;
+}
+
+.db-pricing-eleven .price-colr2 {
+    background-color: #f8c407 !important;
+}
+
+.db-pricing-eleven .price-colr3 {
+    background-color: #c3d22f !important;
+}
+
+.db-pricing-eleven .price-colr4 {
+    background-color: #00afdf !important;
+}
+
+.db-pricing-eleven .price3 {
+    background-color: #c3d22f;
+}
+
+.db-pricing-eleven .price4 {
+    background-color: #00afdf;
+}
+
+.db-pricing-eleven .price small {
+    color: #B8B8B8;
+    display: block;
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+.db-pricing-eleven .type {
+    background-color: #52E89E;
+    padding: 50px 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.db-pricing-eleven .type1 {
+    background-color: #ccdb38;
+    padding: 25px 40px;
+    font-weight: 400;
+    font-size: 60px;
+    font-family: 'roboto', sans-serif;
+}
+
+.db-pricing-eleven .type2 {
+    background-color: #f04e4e;
+    padding: 43px 40px 7px 0;
+    font-weight: 400;
+    font-size: 60px;
+    font-family: 'roboto', sans-serif;
+    text-align: center;
+}
+
+.db-pricing-eleven .type-colr2 {
+    background-color: #fecc17 !important;
+}
+
+.db-pricing-eleven .type-colr3 {
+    background-color: #ccdb38 !important;
+}
+
+.db-pricing-eleven .type-colr4 {
+    background-color: #00bff3 !important;
+}
+
+.db-pricing-eleven .type3 {
+    background-color: #ccdb38;
+    padding: 43px 40px 7px 0;
+    font-weight: 400;
+    font-size: 60px;
+    font-family: 'roboto', sans-serif;
+    text-align: center;
+}
+
+.db-pricing-eleven .type4 {
+    background-color: #00bdf1;
+    font-family: "roboto", sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    padding: 43px 40px 7px 0;
+    text-align: center;
+}
+
+.db-pricing-eleven .pricing-footer {
+    padding: 20px;
+}
+
+.db-attached > .col-lg-4,
+.db-attached > .col-lg-3,
+.db-attached > .col-md-4,
+.db-attached > .col-md-3,
+.db-attached > .col-sm-4,
+.db-attached > .col-sm-3 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.db-pricing-eleven:hover {
+    margin-top: 10px;
+}
+
+.db-pricing-eleven:hover .price {
+    padding-top: 46px;
+    -webkit-box-shadow: 0 3px 21px 1px rgba(176, 174, 176, 1);
+    -moz-box-shadow: 0 3px 21px 1px rgba(176, 174, 176, 1);
+    box-shadow: 0 3px 21px 1px rgba(176, 174, 176, 1);
+}
+
+.db-pricing-eleven:hover .invest-btn-box {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.sub-t1 {
+    color: #f37e7e;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-left: 50%;
+    position: relative;
+    top: -10px;
+}
+
+.sub-t2 {
+    color: #ffe586;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-left: 50%;
+    position: relative;
+    top: -10px;
+}
+
+.sub-t3 {
+    color: #e8f18d;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-left: 66%;
+    position: relative;
+    top: -10px;
+}
+
+.sub-t4 {
+    color: #5bdcff;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-left: 50%;
+    position: relative;
+    top: -10px;
+}
+
+.sub-t2 {
+    margin-left: 66%;
+    font-weight: normal;
+}
+
+.shared-li {
+    color: #9699a6;
+    margin: 13px 0 0 0;
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 11px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.shared-li1 {
+    color: #31364c;
+    font-size: 16px;
+    border-bottom: 1px solid #f5f5f5;
+    margin-top: 14px;
+    padding-bottom: 18px;
+    font-weight: normal;
+}
+
+
+/*========================== PRICE PLAN1 SECTION END =======================*/
+
+
+/*========================== PRICE PLAN2 SECTION =======================*/
+
+.our-pricing-h {
+    color: #31364c;
+    font-size: 46px;
+    margin-top: 6.9%;
+    margin-bottom: 16px;
+    font-weight: 300;
+    font-family: 'roboto', sans-serif;
+}
+
+.our-pricing-p {
+    color: #9699a6;
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.our-pricing-plan3 {
+    color: #9699a6;
+    font-size: 16px;
+    margin-top: 25px;
+    font-weight: normal;
+}
+
+.plan-2-row-pad {
+    margin-top: 22px;
+}
+
+.make-div {
+    background-color: #fafafa;
+    padding-bottom: 20px;
+    padding-top: 0;
+}
+
+@media screen and (min-width: 610px) {
+    .make-div {
+        background-color: #fafafa;
+        padding-bottom: 20px;
+        padding-top: 41%;
+    }
+}
+
+.make-h {
+    color: #9699a6;
+    margin-top: 25px;
+    font-weight: 300;
+    font-family: 'roboto', sans-serif;
+}
+
+.first-box1-text {
+    background-color: #ffffff;
+    padding-top: 19px;
+    padding-bottom: 20px;
+    margin-right: 12%;
+}
+
+.make-p {
+    color: #cdcfd7;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.vps-i-colr {
+    color: #f04e4e;
+}
+
+.vps-i-colr2 {
+    color: #ccdb38;
+}
+
+
+/*========================== PRICE PLAN2 SECTION END =======================*/
+
+
+/*========================== PRICE PLAN3 SECTION =======================*/
+
+.pricing-plans2 {
+    background-color: #ffffff;
+    padding-bottom: 9%;
+}
+
+.col-md-3.col-xs-6 {
+    padding: 0;
+}
+
+@media only screen and (max-width: 425px) {
+    .tooltip {
+        left: 30px !important;
+    }
+}
+
+.btn.btn-default.readmore > a:hover {
+    color: white;
+}
+
+
+/*========================== PRICE PLAN3 SECTION END =======================*/

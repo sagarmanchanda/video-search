@@ -74,3 +74,32 @@ def execute_sql(sql_query):
 	cursor = db.cursor()
 	cursor.execute(sql_query)
 	return cursor
+
+def set_like_count(video_id, username):
+	db = connect_to_mysql()
+	cursor = db.cursor()
+	col_name = get_colname_by_videoid(video_id)
+	sql_query = """
+				UPDATE likes SET %s = 1 WHERE username = \"%s\";  
+				""" % (col_name, username)
+	cursor.execute(sql_query)
+	db.commit()
+	db.close()
+
+def get_colname_by_videoid(video_id):
+	f = open('utility-dict.json', 'r')
+	data = f.read()
+	data = json.loads(data)
+	return data[video_id+'.json']
+
+def get_videoid_by_colname(col_name):
+	f = open('utility-dict.json', 'r')
+	data = f.read()
+	data = json.loads(data)
+	video_id = None
+	for key in data:
+		if data[key] == col_name:
+			video_id = key
+			break
+	return video_id[:-5]
+

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--meta tag css link-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--favicon-->
+    <link rel="icon" href="images/fevicon.ico" type="image/x-icon">
+    <!--title-->
+		<title>Video Search Engine</title>
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/roboto.min.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/bootstrap-material-design.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/material.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/material-design-icon.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/ripples.min.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/custom.css') }}">
+    <!--tooltip-->
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/tooltip/html5tooltips.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/tooltip/html5tooltips.animation.css') }}">
+    <!--revolution slider-->
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/revolution-slider/style.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/revolution-slider/settings.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/select2.min.css') }}">
+    <!--sa-plugins css file-->
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/sa-plugin/sa-style.css') }}">
+    <!--owl carousel css links-->
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/owl.carousel.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/owl.theme.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/directory.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/leftmenu.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/red-color.css') }}">
+</head>
+
+<body>
+    <!--breadcrumb-->
+    <div class="menu-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb breadcrumb-navigation">
+											<li>
+													<a href="{{ url_for('search') }}" class="menu1">Home</a>
+											</li>
+											<li>
+												{% if user.logged_in %}
+													<a href="{{ url_for('logout') }}" class="menu1">Logout - {{ user.username }}</a>
+												{% else %}
+													<a href="{{ url_for('login') }}" class="menu1">Login</a>
+												{% endif %}
+											</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--washington start-->
+    <section class="washington">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="villa-box">
+                        <div class="villa-slider-heading">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="villa-hed-box">
+                                        <h1>{{ video_playing_obj.videoInfo.snippet.title }}</h1>
+                                        <ul class="list-inline">
+                                            <li><span>Description: </span>{{ video_playing_obj.videoInfo.snippet.description }}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-3">
+                                    <div class="villa-icon-box">
+                                        <div class="villa-green">
+                                            <span class="center-block text-center">{{ video_playing_obj.videoInfo.statistics.likeCount }}</span>
+                                        </div>
+
+																				<ul class="list-inline text-center villa-text">
+                                            <li><i class="material-icons"><a href="{{ url_for('like', video_id=video_playing_obj.videoInfo.id) }}">favorite_border</a></i></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-and-tab-sec">
+                            <div class="row">
+                                <div class="col-md-12 allbutton">
+                                    <!-- #camera_wrap_3 -->
+                                    <!-- Nav tabs -->
+
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active" id="messages">
+                                            <div class="video-tab-sec">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <!-- player 1 -->
+                                                        <iframe width="700" height="394" src="https://www.youtube.com/embed/{{ video_playing_obj.videoInfo.id }}" frameborder="0" allowfullscreen></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-doctor">
+                        <ul class="list-unstyled">
+                            <li><h3>Statistics</h3>
+                              </li>
+                        </ul>
+                    </div>
+                    <div class="contact-info-box">
+                        <ul class="list-unstyled">
+                            <li> &nbsp; Views:
+                                <span class="mobile-123">{{ video_playing_obj.videoInfo.statistics.viewCount }}</span></li>
+                            <li> &nbsp; Likes:
+                                <span class="mobile-123">{{ video_playing_obj.videoInfo.statistics.likeCount }}</span></li>
+                            <li> &nbsp; Comments:
+                                <span class="mobile-123">{{ video_playing_obj.videoInfo.statistics.commentCount }}</span></li>
+                            <li> &nbsp; Favorites:
+                                <span class="mobile-123">{{ video_playing_obj.videoInfo.statistics.favoriteCount }}</span></li>
+                            <li> &nbsp; Dislikes:
+                                <span class="mobile-123">{{ video_playing_obj.videoInfo.statistics.dislikeCount }}</span></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--washington closed-->
+    <!--featured offer start-->
+    <section class="featured-offer">
+        <div class="container">
+            <h1 class="browse-h">Related Videos</h1>
+            <p class="browse-p">Related videos based on your preferences. </p>
+            <div class="row">
+                <div class="col-md-12 realhome">
+                    <div id="offers-slider">
+                        <div class="item">
+                            <div class="offers-box">
+                                <figure>
+                                    <figcaption>
+                                    </figcaption>
+                                    <div class="meet-img-hover about-meet-img-hover">
+                                        <img src="images/gridlist/house1.png" class="fancy-img  center-block img-responsive" alt="meet-our-team" />
+                                    </div>
+                                </figure>
+                                <div class="offers-small">
+                                  <a href="#">
+                                    <h5>Family House In Hudson</h5>
+                                  </a>
+                                </div>
+                                <div class="offers-mini small-box-space">
+                                    <p>Video description</p>
+                                    <img src="{{ url_for('static',filename='images/channel.png') }}" alt="agent" class="img-responsive pull-right agent-img" style="width:40px;">
+                                </div>
+                                <div class="offers-bottom">
+                                    <span style="color:#E44546;">100</span>
+                                    <label>Channel name</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--featured offer closed-->
+
+
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="breadcrumb copy-right-box">
+                        <li>
+                            <img src="{{ url_for('static',filename='images/copyright.png') }}" class="copyright-img" alt="copyright">&nbsp; &nbsp; &copy; </li>
+                        <li> 2017 Uppi Dude
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer section ends-->
+    <!--Back to top button-->
+
+    <!--Back to top button end-->
+		<!--jquery file-->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery-1.11.3.min.js') }}"></script>
+    <!--bootstrap js files-->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/material.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/ripples.min.js') }}"></script>
+    <!-- custom js file-->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/custom.js') }}"></script>
+    <!--revolution-slider-->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/revolution-slider/jquery.themepunch.tools.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/revolution-slider/jquery.themepunch.revolution.min.js') }}"></script>
+
+    <!--tooltip js file-->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/tooltip/html5tooltips.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/rangeSlider.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/select2.min.js') }}"></script>
+    <!--owl carousel-->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/owl.carousel.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/real_state_gridlist.js') }}"></script>
+</body>
+
+</html>
