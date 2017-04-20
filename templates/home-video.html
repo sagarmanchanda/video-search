@@ -161,8 +161,11 @@
             <p class="browse-p">Related videos based on your preferences. </p>
             <div class="row">
                 <div class="col-md-12 realhome">
-                    <div id="offers-slider">
+                    <div id="offers-slider" class="owl-carousel owl-theme" style="opacity: 1; display: block;"><div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div></div>
+                        <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 9690px; left: 0px; display: block; transition: all 1000ms ease; transform: translate3d(0px, 0px, 0px);">
+
                       {% for result in results %}
+                      <div class="owl-item" style="width: 285px;">
                         <div class="item">
                             <div class="offers-box">
                                 <figure>
@@ -186,6 +189,7 @@
                                   <label>{{ result.videoInfo.snippet.channelTitle }}</label>
                                 </div>
                             </div>
+                        </div>
                         </div>
                         {% endfor %}
                     </div>
